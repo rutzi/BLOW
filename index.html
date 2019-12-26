@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<title>BLOW</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<section class="asside">
+			<aside>
+				<div class="intersctive-text">
+					<p id='color-test'><span class="color">g</span><span class="color">e</span><span class="color">t </span><span class="color">i</span><span class="color">n </span><span class="color">t</span><span class="color">o</span><span class="color">u</span><span class="color">c</span><span class="color">h </span><span class="color">h</span><span class="color">a</span><span class="color">v</span><span class="color">e </span><span class="color">p</span><span class="color">r</span<span class="color">o</span><span class="color">j</span><span class="color">e</span><span class="color">c</span><span class="color">t </span><span class="color">i</span><span class="color">n </span><span class="color">m</span><span class="color">i</span><span class="color">n</span><span class="color">d</span></p>
+				</div>
+				<div class="aside-btn">
+					<a href=""><img src="icon.jpg"></a>	
+				</div>
+			</aside>
+		</section>
+		<section class="logo">
+			<h1>blow</h1>
+		</section>
+		<nav class="navigation">
+			<ul>
+				<li><a href="">home</a></li>
+				<li><a href="">about</a></li>
+				<li><a href="">work</a></li>
+				<li><a href="">contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<img src="background.jpg">
+		<section class="btn">
+			<a href="">explore works</a>
+		</section>
+	</main>
+	<footer>
+		
+	</footer>
+	<script type="text/javascript">
+		(function(){
+			var delay1 = 100,
+				delay2 = 1500,
+				i = 0,
+				b = 0;
+
+			function startTimer1(){
+				var list = document.getElementsByClassName("color");
+				if(i < list.length){
+					setTimeout(startTimer1, delay1)
+					list[i].classList.add("chang");
+				}
+				i++;
+			}
+			function startTimer2(){
+				var list = document.getElementsByClassName("color");
+				if(b < (list.length/2)+1){
+					setTimeout(startTimer2,  delay1)
+					list[b].classList.add("chang2");
+				}
+				b++;
+			}
+				var timer1 = setTimeout(startTimer1, delay1)	;
+				var timer2 = setTimeout(startTimer2, delay2, delay1)	;
+		})();
+	</script>
+</body>
+</html>
